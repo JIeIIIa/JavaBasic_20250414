@@ -4,6 +4,7 @@ public class GitConflictDemo {
     public static void main(String[] args) {
         System.out.println("Text");
         System.out.println("Your name is");
+        System.out.println("My Name is");
     }
 
     // add comment
