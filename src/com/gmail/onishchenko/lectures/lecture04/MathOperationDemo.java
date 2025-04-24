@@ -2,7 +2,40 @@ package com.gmail.onishchenko.lectures.lecture04;
 
 public class MathOperationDemo {
     public static void main(String[] args) {
-        simpleMathOperations();
+//        simpleMathOperations();
+        increments();
+
+
+    }
+
+    private static void increments() {
+        int a = 10;
+        int b = 6;
+        a %= b;
+        System.out.println("a = " + a);
+
+        a += 1;
+        a++;
+        System.out.println("a = " + a);
+        ++a;
+        System.out.println("a = " + a);
+
+        System.out.println(" -= INCREMENTS =-");
+        a = 10;
+        b = 2;
+        int result = a++ + ++b;
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("result = " + result);
+
+        result = 13; // 14
+        a = 1;       // 2
+        b = 5;       // 6
+        result = result++ + ++a - b++; // 13 + 2 - 5 == 10
+
+        System.out.println("result = " + result);
+        result--;
+        System.out.println("result = " + result);
     }
 
     private static void simpleMathOperations() {
