@@ -3,9 +3,19 @@ package com.gmail.onishchenko.lectures.lecture04;
 public class MathOperationDemo {
     public static void main(String[] args) {
 //        simpleMathOperations();
-        increments();
+//        increments();
+        double a = 123.543;
+        double result = Math.round(100 * a) / 100.0;
+        System.out.println("round(a) == " + result);
+        System.out.println(Math.round(123.5));
 
-
+        a = 398457.39443;
+        System.out.printf("Rounded value == %15.1f\n", a);
+//        System.out.println();
+        String text = "constant" + 1;
+        System.out.printf("Some text = %20s\n", text);
+        System.out.printf("%s: %d\n", "Integers", 42);
+        System.out.println("Good bye:)");
     }
 
     private static void increments() {
