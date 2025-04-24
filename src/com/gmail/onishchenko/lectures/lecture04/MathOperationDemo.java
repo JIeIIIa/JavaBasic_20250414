@@ -1,10 +1,19 @@
 package com.gmail.onishchenko.lectures.lecture04;
 
+import java.util.Scanner;
+
 public class MathOperationDemo {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double a = scanner.nextDouble();
+        double b = scanner.nextDouble();
+        System.out.println(a + b);
+        String line = scanner.nextLine();
+        System.out.println("line = " + line);
+
 //        simpleMathOperations();
 //        increments();
-        double a = 123.543;
+        a = 123.543;
         double result = Math.round(100 * a) / 100.0;
         System.out.println("round(a) == " + result);
         System.out.println(Math.round(123.5));
