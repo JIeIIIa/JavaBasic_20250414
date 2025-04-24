@@ -4,4 +4,6 @@ public class GitConflictDemo {
     public static void main(String[] args) {
         System.out.println("Text");
     }
+
+    // add comment
 }
