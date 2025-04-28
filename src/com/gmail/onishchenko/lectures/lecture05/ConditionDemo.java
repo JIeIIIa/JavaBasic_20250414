@@ -8,7 +8,7 @@ public class ConditionDemo {
         if ((a > 0) && (b > 0)) {
             System.out.println("a and b more than zero!");
         }
-        if (a > 0 || b > 0) {
+        if ((a > 0) || b > 0) {
             System.out.println("a OR b more than zero!");
         }
 
