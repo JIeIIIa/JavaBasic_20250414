@@ -30,6 +30,19 @@ public class SwitchDemo {
             }
         }
 
+//        System.out.println("-= SWITCH =-");
+//        switch (a) {
+//            case 1 -> {
+//                System.out.println("1 or 0");
+//            }
+//            case 2 -> {
+//                System.out.println("2");
+//            }
+//            default -> {
+//                System.out.println("Unknow value");
+//            }
+//        }
+
         System.out.println("Good bye)");
     }
 }
