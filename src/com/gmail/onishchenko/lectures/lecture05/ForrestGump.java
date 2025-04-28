@@ -6,7 +6,6 @@ public class ForrestGump {
         int maxDanger = 42;
         int veryVeryDanger = 100;
 
-
         if (danger < maxDanger) {
             System.out.println("Ok)");
             System.out.println("You may walk)");
@@ -16,5 +15,9 @@ public class ForrestGump {
             System.out.println("RUUUUUUUUUUN!!!!!!!!!!!!");
         }
 
+        boolean flag = true;
+        if (flag == false) {
+            System.out.println("Flag is enabled");
+        }
     }
 }
