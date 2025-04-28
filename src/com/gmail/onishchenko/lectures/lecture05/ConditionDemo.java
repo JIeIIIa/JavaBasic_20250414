@@ -11,5 +11,27 @@ public class ConditionDemo {
         if (a > 0 | b > 0) {
             System.out.println("a OR b more than zero!");
         }
+
+        if (!(a > 0)) { // if (a <= 0) {
+            System.out.println("a <= 0");
+        } else {
+            System.out.println("a > 0");
+        }
+
+        if (!((a > 0) & (b > 0))) {
+            System.out.println("1");
+        } else {
+            System.out.println("2");
+        }
+        if (((a > 0) & (b > 0))) {
+            System.out.println("2");
+        } else {
+            System.out.println("1");
+        }
+        if (!(a > 0) | !(b > 0)) {
+            System.out.println("1");
+        } else {
+            System.out.println("2");
+        }
     }
 }
