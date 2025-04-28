@@ -33,5 +33,9 @@ public class ConditionDemo {
         } else {
             System.out.println("2");
         }
+
+        boolean flag = true;
+        boolean option = true;
+        System.out.println("flag ^ options is " + (flag ^ option));
     }
 }
