@@ -8,8 +8,13 @@ public class LoopDemo {
         System.out.print("Input bound (0-1_000_000): ");
         int bound = scanner.nextInt();
 
-        for (int currentNumber = 0; currentNumber < bound; currentNumber++) {
-            System.out.println(currentNumber);
+        int i = 0;
+        for (; ;) {
+            if (!(i < bound)) {
+                break;
+            }
+            System.out.println(i);
+            i++;
         }
         System.out.println("END)");
     }
