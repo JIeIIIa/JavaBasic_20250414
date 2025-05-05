@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class LoopDemo {
     public static void main(String[] args) {
 //        forDemo1();
-//        forDemo2();
-        whileDemo1();
+        forDemo2();
+//        whileDemo1();
 //        whileDemo2();
-        doWhileDemo1();
+//        doWhileDemo1();
     }
 
     private static void doWhileDemo1() {
@@ -52,8 +52,10 @@ public class LoopDemo {
     }
 
     private static void forDemo2() {
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1, step = 1; i < 10; i++, step++) {
+            System.out.print("step #" + step + "\t");
             if (i % 2 == 0) {
+                System.out.println();
                 continue;
             }
             for (int j = 1; j < 10; j++) {
