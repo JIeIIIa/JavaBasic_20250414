@@ -5,7 +5,13 @@ import java.util.Scanner;
 public class LoopDemo {
     public static void main(String[] args) {
 //        forDemo1();
-        forDemo2();
+//        forDemo2();
+        int bound = 5;
+        int i = 0;
+        while (i < bound) {
+            System.out.println(i);
+            i++;
+        }
     }
 
     private static void forDemo2() {
