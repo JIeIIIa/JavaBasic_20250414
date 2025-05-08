@@ -9,6 +9,11 @@ public class Lecture07Demo {
         temperatures[3] = 13;
         temperatures[4] = 15;
 
+        int[] previousTemperatures = new int[100];
+
+        print(previousTemperatures);
+        print(temperatures);
+
         long sum = 0;
         for (int i = 0; i < temperatures.length; i++) {
             sum += temperatures[i];
@@ -16,5 +21,13 @@ public class Lecture07Demo {
         int average = (int) (sum / temperatures.length);
 
         System.out.println("Average temperature == " + average);
+    }
+
+    public static void print(int[] temperatures) {
+        System.out.print("Temperatures: [");
+        for (int i = 0; i < temperatures.length; i++) {
+            System.out.print(temperatures[i] + ", ");
+        }
+        System.out.println("]");
     }
 }
