@@ -4,7 +4,7 @@ public class Lecture07Demo {
     public static void main(String[] args) {
         int[] temperatures = {3, 12, 10, 13, 15};
 //        temperatures[0] = 2.34; // error
-        int[] previousTemperatures = new int[1];
+        int[] previousTemperatures = new int[0];
 
         print(previousTemperatures);
         print(temperatures);
