@@ -2,13 +2,12 @@ package com.gmail.onishchenko.lectures.lecture07;
 
 public class Lecture07Demo {
     public static void main(String[] args) {
-        int temperature = 3;
-        int yesterdayTemperature = 12;
-        int dayBeforeYesterdayTemperature = 10;
+        int[] temperatures = new int[3];
+        temperatures[0] = 3;
+        temperatures[1] = 12;
+        temperatures[2] = 10;
 
-        int size = 3;
-
-        int average = (temperature + yesterdayTemperature + dayBeforeYesterdayTemperature) / size;
+        int average = (temperatures[0] + temperatures[1] + temperatures[2]) / temperatures.length;
 
         System.out.println("Average temperature == " + average);
     }
