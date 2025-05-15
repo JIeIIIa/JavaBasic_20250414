@@ -5,7 +5,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class OneDimensionArrays {
     public static void main(String[] args) {
-        int size = readInt();
+//        int size = readInt();
+        int size = 10;
         int[] array = generateArray(size);
         print(array);
         int sum = negativeSum(array);
@@ -41,8 +42,12 @@ public class OneDimensionArrays {
 
     private static void print(int[] array) {
         System.out.print("[");
-        for (int element : array) {
-            System.out.print(element + "\t");
+        if (array.length > 0) {
+            System.out.print(array[0]);
+        }
+        for (int i = 1; i < array.length; i++) {
+            int element = array[i];
+            System.out.print(", " + element);
         }
         System.out.println("]");
     }
@@ -70,7 +75,7 @@ public class OneDimensionArrays {
     private static void maxMinStatistics(int[] array) {
         int maxIndex = 0;
         int minIndex = 0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) {
             if (array[maxIndex] < array[i]) {
                 maxIndex = i;
             }
@@ -83,7 +88,6 @@ public class OneDimensionArrays {
     }
 
     private static void sumAfterFirstNegative(int[] array) {
-        int sum;
         int index = 0;
         while (index < array.length && array[index] >= 0) {
             index++;
@@ -92,7 +96,7 @@ public class OneDimensionArrays {
         if (index >= array.length) {
             System.out.println("No negative elements!!!");
         } else {
-            sum = 0;
+            int sum = 0;
             for (int i = index + 1; i < array.length; i++) {
                 sum += array[i];
             }
