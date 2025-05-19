@@ -12,7 +12,7 @@ public class ArrayUtils {
 
         array = null;
 //        print(array);
-        print(null);
+        print((int[]) null);
         int[] emptyArray = {};
         print(emptyArray);
         print(new int[0]);
@@ -29,6 +29,11 @@ public class ArrayUtils {
         System.out.print("array: ");
         print(array);
         System.out.println("index = " + index);
+
+        System.out.println();
+        print("qwerty");
+        print("qwerty", "asd");
+        print(new String[]{"qwerty", "asd", "zxc"});
     }
 
     public static void print(int[] array) {
@@ -60,5 +65,23 @@ public class ArrayUtils {
         System.out.print(" >> array");
         print(array);
 
+    }
+
+    public static void print(String line) {
+        System.out.println("One parameter");
+        System.out.println(line);
+    }
+
+    public static void print(String line, String secondLine) {
+        System.out.println("Two parameter");
+        System.out.println(line);
+        System.out.println(secondLine);
+    }
+
+    public static void print(String[] lines) {
+        System.out.println("Array as parameter");
+        for (String line : lines) {
+            System.out.println(line);
+        }
     }
 }
