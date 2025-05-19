@@ -17,6 +17,18 @@ public class ArrayUtils {
         print(emptyArray);
         print(new int[0]);
         print(new int[]{1, 5, 2, 46});
+
+        System.out.println();
+        System.out.println("Modify parameters inside a method");
+        array = new int[]{1, 5, 2, 46};
+        int index = -1;
+        System.out.print("array: ");
+        print(array);
+        System.out.println("index = " + index);
+        modify(array, index);
+        System.out.print("array: ");
+        print(array);
+        System.out.println("index = " + index);
     }
 
     public static void print(int[] array) {
@@ -36,5 +48,17 @@ public class ArrayUtils {
 
     public static int sum(int[] array, int i, int j) {
         return array[i] + array[j];
+    }
+
+    public static void modify(int[] array, int index) {
+        System.out.println("Modify parameters");
+        index = 42;
+        array = new int[100];
+//        array[0] = -1000;
+        System.out.println("Modified data");
+        System.out.println(" >> index = " + index);
+        System.out.print(" >> array");
+        print(array);
+
     }
 }
