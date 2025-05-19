@@ -33,7 +33,8 @@ public class ArrayUtils {
         System.out.println();
         print("qwerty");
         print("qwerty", "asd");
-        print(new String[]{"qwerty", "asd", "zxc"});
+        print("qwerty", "asd", "zxc");
+        print(1, "qwerty", "asd", "zxc");
     }
 
     public static void print(int[] array) {
@@ -78,10 +79,33 @@ public class ArrayUtils {
         System.out.println(secondLine);
     }
 
-    public static void print(String[] lines) {
+    public static void print(String... lines) {
         System.out.println("Array as parameter");
         for (String line : lines) {
             System.out.println(line);
         }
+    }
+
+    public static void print(int number, String... lines) {
+        System.out.println("int and String varargs");
+        System.out.println("number = " + number);
+        for (String line : lines) {
+            System.out.println(line);
+        }
+    }
+
+    /*
+    * buildReport(1000, "Line");
+    * buildReport("Line"); // defaultYear == 2025
+    * */
+
+    public static void buildReport(int year, String... lines) {
+        System.out.println("Building report");
+
+    }
+
+    public static void buildReport(String... lines) {
+        buildReport(2025, lines);
+
     }
 }
