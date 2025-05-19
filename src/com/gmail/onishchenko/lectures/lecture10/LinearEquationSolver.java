@@ -1,10 +1,10 @@
 package com.gmail.onishchenko.lectures.lecture10;
 
 /*
-* a * x + b == 0
-*
-* root == -b / a
-* */
+ * a * x + b == 0
+ *
+ * root == -b / a
+ * */
 public class LinearEquationSolver {
     public static void main(String[] args) {
         System.out.println("x + 10 == 0");
@@ -18,6 +18,19 @@ public class LinearEquationSolver {
     }
 
     public static double findRoot(int a, int b) {
-        return -1.0 * b / a;
+        if (a == 0) {
+            System.out.println("First parameter is ZERO");
+            return 0;
+        } else {
+            return -1.0 * b / a;
+        }
+    }
+
+//    public static double findRoot(int parameter, int anotherParameter) {
+//
+//    }
+
+    public static double findRoot(double a, double b) {
+        return b / a;
     }
 }
