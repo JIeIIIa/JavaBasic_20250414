@@ -34,6 +34,16 @@ public class MultiDimensionArray {
                 {6, 7, 8}
         };
 
+        int[] array = {7, 7, 7};
+        matrix[1] = array;
+
+        printMatrix(matrix);
+        System.out.println("Change element of array");
+        array[2] = 1000;
+        printMatrix(matrix);
+    }
+
+    private static void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; matrix[i] != null && j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + "\t");
