@@ -4,14 +4,10 @@ import com.gmail.onishchenko.lectures.lecture11.subpackage.Device;
 
 public class DeviceRunner {
     public static void main(String[] args) {
-        Device device = new Device();
-        device.serialNumber = "111-1111";
-        device.year = 2025;
+        Device device = new Device("111-1111", 2025);
         device.describe();
 
-        Device anotherDevice = new Device();
-        anotherDevice.serialNumber = "pretty";
-        anotherDevice.year = 2026;
+        Device anotherDevice = new Device("pretty", 2026);
         anotherDevice.describe();
         anotherDevice.year--;
         anotherDevice.describe();
