@@ -1,6 +1,7 @@
 package com.gmail.onishchenko.lectures.lecture11;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class WrapperDemo {
     public static void main(String[] args) {
@@ -10,10 +11,33 @@ public class WrapperDemo {
         System.out.println("Wrapped value " + wrappedValue);
 
         Integer result = new Integer(wrappedValue.intValue() * 10);
+
+        Integer.valueOf(42);
         System.out.println("result = " + result);
 
         demo();
+
+
+        Integer a = 43;
+        Integer b =100;
+        Integer sum = a + b;
+
     }
+
+    public static int readInt() {
+        Scanner scanner = new Scanner(System.in);
+        do {
+            if (!scanner.hasNextInt()) {
+                System.out.println("Error");
+                scanner.nextLine();
+            } else {
+                return scanner.nextInt();
+            }
+
+        } while (true);
+    }
+
+
 
     public static void demo() {
         System.out.println("DEMO");
