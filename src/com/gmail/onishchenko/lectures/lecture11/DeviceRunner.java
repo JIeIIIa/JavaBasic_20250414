@@ -7,19 +7,15 @@ public class DeviceRunner {
         Device device = new Device();
         device.serialNumber = "111-1111";
         device.year = 2025;
-        describe(device);
+        device.describe();
 
         Device anotherDevice = new Device();
         anotherDevice.serialNumber = "pretty";
         anotherDevice.year = 2026;
-        describe(anotherDevice);
+        anotherDevice.describe();
         anotherDevice.year--;
-        describe(anotherDevice);
+        anotherDevice.describe();
     }
 
-    public static void describe(Device device) {
-        System.out.println("I'm device with serialNumber == " + device.serialNumber);
-        System.out.println("Production year == " + device.year);
-        System.out.println();
-    }
+
 }
