@@ -11,6 +11,9 @@ public class DeviceRunner {
         anotherDevice.describe();
         anotherDevice.year--;
         anotherDevice.describe();
+
+        Device defaultDevice = new Device();
+        defaultDevice.describe();
     }
 
 
