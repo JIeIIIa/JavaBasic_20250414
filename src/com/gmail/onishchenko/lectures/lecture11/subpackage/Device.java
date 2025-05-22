@@ -4,9 +4,14 @@ public class Device {
     public String serialNumber;
     public int year;
 
-    public Device(String number, int productionYear) {
-        serialNumber = number;
-        year = productionYear;
+    public Device(String serialNumber) {
+        this.serialNumber = serialNumber;
+        year = 2025;
+    }
+
+    public Device(String serialNumber, int year) {
+        this.serialNumber = serialNumber;
+        this.year = year;
     }
 
     public void describe() {
