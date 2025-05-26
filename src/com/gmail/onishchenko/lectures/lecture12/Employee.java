@@ -21,12 +21,4 @@ public class Employee {
     public void checkOut() {
         System.out.printf("%s[%s]: Go home\n", name, innerNumber);
     }
-
-    public void makeReport() {
-
-    }
-
-    public void validateVisitor() {
-
-    }
 }

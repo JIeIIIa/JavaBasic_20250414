@@ -9,5 +9,10 @@ public class EmployeeRunner {
 
         Employee anotherEmployee = new Employee("Hulk", "0002");
         anotherEmployee.checkIn();
+
+        Security spiderMan = new Security("Spider man", "0003");
+        spiderMan.checkIn();
+        spiderMan.validateVisitor();
+        spiderMan.checkOut();
     }
 }
