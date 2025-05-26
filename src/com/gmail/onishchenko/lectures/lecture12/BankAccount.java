@@ -2,7 +2,7 @@ package com.gmail.onishchenko.lectures.lecture12;
 
 public class BankAccount {
     private int money;
-    private boolean active;
+    protected boolean active;
 
     public BankAccount(int money) {
         this.money = money;
