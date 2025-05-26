@@ -4,10 +4,9 @@ public class Employee {
     String name;
     String innerNumber;
 
-    public Employee() {
-        this.name = "Unknown";
-        this.innerNumber = null;
-    }
+//    public Employee() {
+//        this("Unknown", null);
+//    }
 
     public Employee(String name, String innerNumber) {
         this.name = name;

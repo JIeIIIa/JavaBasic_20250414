@@ -14,5 +14,11 @@ public class EmployeeRunner {
         spiderMan.checkIn();
         spiderMan.validateVisitor();
         spiderMan.checkOut();
+
+        Accounter accounter = new Accounter("Top accounter", "0003");
+        accounter.checkIn();
+        accounter.makeReport();
+        accounter.checkOut();
+        accounter.describe();
     }
 }
