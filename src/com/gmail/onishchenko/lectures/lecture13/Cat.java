@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture13;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Runnable {
     public Cat(String name, int age) {
         super(name, age);
     }
@@ -12,5 +12,10 @@ public class Cat extends Animal {
 
     public void describe() {
         System.out.println("I'm a cat. My name is " + getName());
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Cat is running");
     }
 }

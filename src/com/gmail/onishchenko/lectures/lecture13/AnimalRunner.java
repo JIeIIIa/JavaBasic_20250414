@@ -2,17 +2,24 @@ package com.gmail.onishchenko.lectures.lecture13;
 
 public class AnimalRunner {
     public static void main(String[] args) {
-        Animal[] animals = {new Cat("Filex", 3),
+        Cat cat = new Cat("Filex", 3);
+        Animal[] animals = {cat,
                 new Dog("Friend", 10),
 //                new Animal("UNKNOWN", -1) // can't be instantiated
         };
 
         for (Animal animal : animals) {
             animal.say();
-            if (animal instanceof Cat cat) {
+            if (animal instanceof Cat createdCat) {
                 ((Cat) animal).describe();
-                cat.describe();
+                createdCat.describe();
             }
         }
+        doRun(cat);
+        doRun(new Person());
+    }
+
+    public static void doRun(Runnable runnable) {
+        runnable.run();
     }
 }
