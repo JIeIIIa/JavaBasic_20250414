@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture13;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private int age;
 
@@ -25,7 +25,5 @@ public class Animal {
         this.age = age;
     }
 
-    public void say() {
-        System.out.println("Default text");
-    }
+    public abstract void say();
 }
