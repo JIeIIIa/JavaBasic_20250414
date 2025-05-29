@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture13;
 
-public abstract class Animal {
+public abstract class Animal extends Object {
     private String name;
     private int age;
 

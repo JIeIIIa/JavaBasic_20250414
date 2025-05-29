@@ -17,6 +17,10 @@ public class AnimalRunner {
         }
         doRun(cat);
         doRun(new Person());
+
+        String string = cat.toString();
+        System.out.println(string);
+        System.out.println(cat);
     }
 
     public static void doRun(Runnable runnable) {

@@ -18,4 +18,12 @@ public class Cat extends Animal implements Runnable {
     public void run() {
         System.out.println("Cat is running");
     }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name=" + getName() +
+                ",age=" + getAge() +
+                "}";
+    }
 }
