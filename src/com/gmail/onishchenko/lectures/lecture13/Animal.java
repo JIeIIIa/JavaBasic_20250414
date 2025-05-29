@@ -26,4 +26,8 @@ public abstract class Animal extends Object {
     }
 
     public abstract void say();
+
+    public void describe() {
+        System.out.println("I'm a cat. My name is " + getName());
+    }
 }

@@ -21,6 +21,19 @@ public class AnimalRunner {
         String string = cat.toString();
         System.out.println(string);
         System.out.println(cat);
+
+//        Cat copiedCat = new Cat("Filex", 3);
+        Cat copiedCat = null;
+//        Cat copiedCat = cat;
+        if (cat.equals(copiedCat)) {
+            System.out.println("Cats are equal");
+        } else {
+            System.out.println("Cats are NOT equal");
+        }
+
+//        cat = null;
+        boolean result = cat.equals(null);
+        System.out.println("result == " + result);
     }
 
     public static void doRun(Runnable runnable) {
