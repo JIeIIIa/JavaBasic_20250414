@@ -18,6 +18,8 @@ public class TriangleDemo {
 //        importantColor = "default";
 
         Triangle.SimpleEdge boldEdge = new Triangle.SimpleEdge(5, "red") {
+            private String additionalField;
+
             @Override
             public String toString() {
                 return "BoldEdge{" +
@@ -42,18 +44,17 @@ public class TriangleDemo {
         Edge edge = boldEdge;
         System.out.println("Edge length is " + edge.getLength());
 
-        Edge defaultEdge = new Edge() {
-            @Override
-            public int getLength() {
-                return 10;
-            }
-
-//            @Override
-//            public String getColor() {
-//                return "green";
-//            }
-        };
+        Edge defaultEdge = () -> 10 * 2 - 1;
         System.out.println("Default edge length: " + defaultEdge.getLength());
         System.out.println("Default edge color: " + defaultEdge.getColor());
+
+        Printer printer = new Printer() {
+            @Override
+            public void print(Triangle triangle) {
+                System.out.println("DEFAULT PRINTER: " + triangle.toString());
+            }
+        };
+        Printer anotherPrinter = (t) -> System.out.println("DEFAULT PRINTER: " + t.toString());
+        printer.print(coloredTriangle);
     }
 }
