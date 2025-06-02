@@ -45,6 +45,14 @@ public class Triangle {
             this.color = color;
         }
 
+        public int getLength() {
+            return length;
+        }
+
+        public String getColor() {
+            return color;
+        }
+
         @Override
         public String toString() {
             return "Edge{" +

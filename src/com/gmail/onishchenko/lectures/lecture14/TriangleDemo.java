@@ -14,27 +14,20 @@ public class TriangleDemo {
 //        privateEdges[0] = -837465876;
 //        System.out.println(triangle);
 
-        class BoldEdge extends Triangle.Edge {
-            private int length;
-            private String color;
-
-            public BoldEdge(int length, String color) {
-                super(length, color);
-            }
-
+        Triangle.Edge boldEdge = new Triangle.Edge(5, "red") {
             @Override
             public String toString() {
                 return "BoldEdge{" +
-                        "length=" + length +
-                        ", color='" + color + '\'' +
+                        "length=" + getLength() +
+                        ", color='" + getColor() + '\'' +
                         '}';
             }
-        }
+        };
 
         Triangle.Edge[] complexEdges = {
                 new Triangle.Edge(3, "black"),
                 new Triangle.Edge(4, "green"),
-                new BoldEdge(5, "red")
+                boldEdge
         };
         Triangle coloredTriangle = new Triangle(complexEdges);
         System.out.println(coloredTriangle);
