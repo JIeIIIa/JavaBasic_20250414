@@ -29,6 +29,10 @@ public class Car {
                 '}';
     }
 
+    public void detailedStatistics() {
+        System.out.println(engine.year);
+    }
+
     public class Engine {
         private String model;
         private int year;
@@ -44,6 +48,10 @@ public class Car {
                     "model='" + model + '\'' +
                     ", year=" + year +
                     '}';
+        }
+
+        public void detailedStatistics() {
+            System.out.println("Engine is set into car: " + Car.this.model);
         }
     }
 }

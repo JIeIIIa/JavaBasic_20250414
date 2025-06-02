@@ -8,5 +8,6 @@ public class CarDemo {
         Car.Engine engine = car.new Engine("bw-007", 2025);
         car.setEngine(engine);
         System.out.println(car);
+        engine.detailedStatistics();
     }
 }
