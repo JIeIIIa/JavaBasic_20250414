@@ -9,10 +9,21 @@ public class TriangleDemo {
         edges[0] = -1000;
         System.out.println(triangle);
 
-        System.out.println("Unexpected changes");
-        int[] privateEdges = triangle.getEdges();
-        privateEdges[0] = -837465876;
-        System.out.println(triangle);
+//        System.out.println("Unexpected changes");
+//        int[] privateEdges = triangle.getEdges();
+//        privateEdges[0] = -837465876;
+//        System.out.println(triangle);
 
+        Triangle.Edge[] complexEdges = {
+                new Triangle.Edge(3, "black"),
+                new Triangle.Edge(4, "green"),
+                new Triangle.Edge(5, "red")
+        };
+        Triangle coloredTriangle = new Triangle(complexEdges);
+        System.out.println(coloredTriangle);
+
+        System.out.println("Scale triangle");
+        Triangle.increase(coloredTriangle, 2);
+        System.out.println(coloredTriangle);
     }
 }
