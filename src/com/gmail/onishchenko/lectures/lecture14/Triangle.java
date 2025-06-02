@@ -3,17 +3,17 @@ package com.gmail.onishchenko.lectures.lecture14;
 import java.util.Arrays;
 
 public class Triangle {
-    private Edge[] edges;
+    private SimpleEdge[] edges;
     private String[] color;
 
     public Triangle(int[] edges) {
-        this.edges = new Edge[edges.length];
+        this.edges = new SimpleEdge[edges.length];
         for (int i = 0; i < this.edges.length; i++) {
-            this.edges[i] = new Edge(edges[i], "black");
+            this.edges[i] = new SimpleEdge(edges[i], "black");
         }
     }
 
-    public Triangle(Edge[] edges) {
+    public Triangle(SimpleEdge[] edges) {
         this.edges = Arrays.copyOf(edges, edges.length);
     }
 
@@ -30,17 +30,17 @@ public class Triangle {
 
     public static void increase(Triangle triangle, int scale) {
         for (int i = 0; i < triangle.edges.length; i++) {
-            Edge edge = triangle.edges[i];
+            SimpleEdge edge = triangle.edges[i];
             edge.length *= scale;
         }
 
     }
 
-    public static class Edge {
+    public static class SimpleEdge implements Edge {
         private int length;
         private String color;
 
-        public Edge(int length, String color) {
+        public SimpleEdge(int length, String color) {
             this.length = length;
             this.color = color;
         }
@@ -55,7 +55,7 @@ public class Triangle {
 
         @Override
         public String toString() {
-            return "Edge{" +
+            return "SimpleEdge{" +
                     "length=" + length +
                     ", color='" + color + '\'' +
                     '}';

@@ -17,7 +17,7 @@ public class TriangleDemo {
 
 //        importantColor = "default";
 
-        Triangle.Edge boldEdge = new Triangle.Edge(5, "red") {
+        Triangle.SimpleEdge boldEdge = new Triangle.SimpleEdge(5, "red") {
             @Override
             public String toString() {
                 return "BoldEdge{" +
@@ -27,9 +27,9 @@ public class TriangleDemo {
             }
         };
 
-        Triangle.Edge[] complexEdges = {
-                new Triangle.Edge(3, "black"),
-                new Triangle.Edge(4, "green"),
+        Triangle.SimpleEdge[] complexEdges = {
+                new Triangle.SimpleEdge(3, "black"),
+                new Triangle.SimpleEdge(4, "green"),
                 boldEdge
         };
         Triangle coloredTriangle = new Triangle(complexEdges);
@@ -38,5 +38,22 @@ public class TriangleDemo {
         System.out.println("Scale triangle");
         Triangle.increase(coloredTriangle, 2);
         System.out.println(coloredTriangle);
+
+        Edge edge = boldEdge;
+        System.out.println("Edge length is " + edge.getLength());
+
+        Edge defaultEdge = new Edge() {
+            @Override
+            public int getLength() {
+                return 10;
+            }
+
+//            @Override
+//            public String getColor() {
+//                return "green";
+//            }
+        };
+        System.out.println("Default edge length: " + defaultEdge.getLength());
+        System.out.println("Default edge color: " + defaultEdge.getColor());
     }
 }
