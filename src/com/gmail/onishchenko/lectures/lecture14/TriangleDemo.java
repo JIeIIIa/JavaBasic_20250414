@@ -13,13 +13,16 @@ public class TriangleDemo {
 //        int[] privateEdges = triangle.getEdges();
 //        privateEdges[0] = -837465876;
 //        System.out.println(triangle);
+        String importantColor = "red";
+
+//        importantColor = "default";
 
         Triangle.Edge boldEdge = new Triangle.Edge(5, "red") {
             @Override
             public String toString() {
                 return "BoldEdge{" +
                         "length=" + getLength() +
-                        ", color='" + getColor() + '\'' +
+                        ", color='" + importantColor + '\'' +
                         '}';
             }
         };
