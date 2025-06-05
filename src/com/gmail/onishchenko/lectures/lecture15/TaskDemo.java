@@ -6,6 +6,7 @@ public class TaskDemo {
         Status.TODO.setDefaultDuration(777);
         Task task = new Task("Learn Java", Status.TODO);
         System.out.println(task);
+        task.getStatus().run();
         System.out.println("Task default duration: " + task.getStatus().getDefaultDuration());
 
         task.setStatus(Status.DONE);
@@ -14,6 +15,7 @@ public class TaskDemo {
 //        Task.Status fakeStatus = new Task.Status("FAKE STATUS"); // can't be created via private constructor
 //        task.setStatus(fakeStatus);
         System.out.println(task);
+        task.getStatus().run();
 
     }
 }
