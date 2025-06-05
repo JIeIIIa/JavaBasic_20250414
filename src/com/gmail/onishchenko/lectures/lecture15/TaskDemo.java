@@ -40,9 +40,16 @@ public class TaskDemo {
         }
         System.out.println();
         System.out.println("CLONE TASK");
+        Person worker = new Person("Worker");
+        task.setPerson(worker);
         Task clonedTask = task.clone();
+        Task copiedTask = new Task(task);
+
+        task.getPerson().name = "NEW NAME";
+
         System.out.println("Original object: " + task);
         System.out.println("Cloned   object: " + clonedTask);
+        System.out.println("Copied   object: " + copiedTask);
         if (task == clonedTask) {
             System.out.println("References are equal");
         } else {

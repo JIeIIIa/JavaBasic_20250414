@@ -10,10 +10,17 @@ public class Task implements Cloneable {
 
     private String description;
     private Status status;
+    private Person person;
 
     public Task(String description, Status status) {
         this.description = description;
         setStatus(status);
+    }
+
+    public Task(Task task) {
+        this.status = task.status;
+        this.description = task.description;
+        this.person = new Person(task.getPerson().name);
     }
 
     public void setStatus(Status status) {
@@ -24,11 +31,20 @@ public class Task implements Cloneable {
         return status;
     }
 
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "description='" + description + '\'' +
-                ", status='" + status + '\'' +
+                ", status=" + status +
+                ", person=" + person +
                 '}';
     }
 
