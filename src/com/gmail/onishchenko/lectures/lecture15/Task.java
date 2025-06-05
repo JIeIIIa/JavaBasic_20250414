@@ -1,7 +1,7 @@
 package com.gmail.onishchenko.lectures.lecture15;
 
 
-public class Task {
+public class Task implements Cloneable {
     private static final String[] AVAILABLE_STATUSES = {
             "TODO",
             "IN_PROGRESS",
@@ -30,6 +30,11 @@ public class Task {
                 "description='" + description + '\'' +
                 ", status='" + status + '\'' +
                 '}';
+    }
+
+    @Override
+    public Task clone() throws CloneNotSupportedException {
+        return (Task) super.clone();
     }
 
 }

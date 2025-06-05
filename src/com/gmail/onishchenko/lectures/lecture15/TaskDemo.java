@@ -3,11 +3,12 @@ package com.gmail.onishchenko.lectures.lecture15;
 import java.util.Scanner;
 
 public class TaskDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 //        Task.Status.todo = Task.Status.done;
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
         System.out.print("Initial status: ");
-        String line = scanner.nextLine();
+//        String line = scanner.nextLine();
+        String line = "DONE";
         Status status = convertToStatus(line);
 //        Status status = Status.valueOf(line.toUpperCase());
 
@@ -37,6 +38,18 @@ public class TaskDemo {
             case TODO -> System.out.println("Be ready");
             default -> System.out.println("Unknown behavior");
         }
+        System.out.println();
+        System.out.println("CLONE TASK");
+        Task clonedTask = task.clone();
+        System.out.println("Original object: " + task);
+        System.out.println("Cloned   object: " + clonedTask);
+        if (task == clonedTask) {
+            System.out.println("References are equal");
+        } else {
+            System.out.println("References are NOT equal");
+        }
+        System.out.println("Cloned task status: " + clonedTask.getStatus());
+
     }
 
     private static Status convertToStatus(String text) {
