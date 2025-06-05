@@ -28,6 +28,17 @@ public class TaskDemo {
         System.out.println();
         System.out.println(Status.IN_PROGRESS);
 
+
+        switch (status) {
+            case DONE:
+                System.out.println("All done");
+//                break;
+            case TODO:
+                System.out.println("Be ready");
+                break;
+            default:
+                System.out.println("Unknown behavior");
+        }
     }
 
     private static Status convertToStatus(String text) {
