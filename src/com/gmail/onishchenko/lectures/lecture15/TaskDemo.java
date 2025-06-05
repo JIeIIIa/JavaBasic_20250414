@@ -30,14 +30,12 @@ public class TaskDemo {
 
 
         switch (status) {
-            case DONE:
-                System.out.println("All done");
-//                break;
-            case TODO:
-                System.out.println("Be ready");
-                break;
-            default:
-                System.out.println("Unknown behavior");
+            case DONE -> {
+                System.out.print("All ");
+                System.out.println("done");
+            }
+            case TODO -> System.out.println("Be ready");
+            default -> System.out.println("Unknown behavior");
         }
     }
 
