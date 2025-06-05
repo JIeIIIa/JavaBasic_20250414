@@ -38,4 +38,11 @@ public enum Status implements Runnable {
     public void run() {
         System.out.println("Running a task is status " + name());
     }
+
+    @Override
+    public String toString() {
+        return "Status{" +
+                "defaultDuration=" + defaultDuration +
+                '}';
+    }
 }

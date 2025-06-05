@@ -1,10 +1,18 @@
 package com.gmail.onishchenko.lectures.lecture15;
 
+import java.util.Scanner;
+
 public class TaskDemo {
     public static void main(String[] args) {
 //        Task.Status.todo = Task.Status.done;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Initial status: ");
+        String line = scanner.nextLine();
+        Status status = convertToStatus(line);
+//        Status status = Status.valueOf(line.toUpperCase());
+
         Status.TODO.setDefaultDuration(777);
-        Task task = new Task("Learn Java", Status.TODO);
+        Task task = new Task("Learn Java", status);
         System.out.println(task);
         task.getStatus().run();
         System.out.println("Task default duration: " + task.getStatus().getDefaultDuration());
@@ -17,5 +25,19 @@ public class TaskDemo {
         System.out.println(task);
         task.getStatus().run();
 
+        System.out.println();
+        System.out.println(Status.IN_PROGRESS);
+
+    }
+
+    private static Status convertToStatus(String text) {
+        Status[] values = Status.values();
+        for (Status value : values) {
+            if (value.name().equalsIgnoreCase(text)) {
+                return value;
+            }
+        }
+
+        return null;
     }
 }
