@@ -9,25 +9,15 @@ public class Task {
     };
 
     private String description;
-    private String status;
+    private Status status;
 
-    public Task(String description, String status) {
+    public Task(String description, Status status) {
         this.description = description;
         setStatus(status);
     }
 
-    public void setStatus(String status) {
-        validate(status);
+    public void setStatus(Status status) {
         this.status = status;
-    }
-
-    private void validate(String status) {
-        for (String availableStatus : AVAILABLE_STATUSES) {
-            if (availableStatus.equals(status)) {
-                return;
-            }
-        }
-        throw new RuntimeException("Wrong status: " + status);
     }
 
     @Override
@@ -36,5 +26,23 @@ public class Task {
                 "description='" + description + '\'' +
                 ", status='" + status + '\'' +
                 '}';
+    }
+
+    public static class Status {
+        public static final Status TODO = new Status("TODO");
+        public static final Status IN_PROGRESS = new Status("IN_PROGRESS");
+        public static final Status DONE = new Status("DONE");
+
+
+        private String status;
+
+        private Status(String status) {
+            this.status = status;
+        }
+
+        @Override
+        public String toString() {
+            return status;
+        }
     }
 }

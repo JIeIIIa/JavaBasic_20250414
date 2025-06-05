@@ -2,12 +2,14 @@ package com.gmail.onishchenko.lectures.lecture15;
 
 public class TaskDemo {
     public static void main(String[] args) {
-        Task task = new Task("Learn Java", "TODO");
-        Task copiedTask = new Task("Learn Java", "IN_PROGRESS");
+//        Task.Status.todo = Task.Status.done;
+        Task task = new Task("Learn Java", Task.Status.TODO);
+        Task copiedTask = new Task("Learn Java", Task.Status.IN_PROGRESS);
         System.out.println(task);
-        task.setStatus("DONE");
+        task.setStatus(Task.Status.DONE);
         System.out.println(task);
-        task.setStatus("FAKE STATUS");
+//        Task.Status fakeStatus = new Task.Status("FAKE STATUS"); // can't be created via private constructor
+//        task.setStatus(fakeStatus);
         System.out.println(task);
     }
 }
