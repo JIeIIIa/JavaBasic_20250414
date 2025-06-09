@@ -2,6 +2,7 @@ package com.gmail.onishchenko.homework.printer;
 
 public class PrinterDemo {
     public static void main(String[] args) {
+        ConsolePrinter.executeStatistics();
         ConsolePrinter.Message[] messages = {
                 new ConsolePrinter.Message("Santa Clause", "Ho-ho-ho"),
                 new ConsolePrinter.Message("", "Ho-ho-ho"),
@@ -12,9 +13,11 @@ public class PrinterDemo {
                 new ConsolePrinter.Message("", ""),
         };
 
-        ConsolePrinter printer = new ConsolePrinter();
+        ConsolePrinterWrapper printer = new ConsolePrinterWrapper();
         for (ConsolePrinter.Message message : messages) {
             printer.print(message);
         }
+
+        printer.executeStatistics();
     }
 }

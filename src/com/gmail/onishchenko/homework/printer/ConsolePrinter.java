@@ -1,6 +1,8 @@
 package com.gmail.onishchenko.homework.printer;
 
 public class ConsolePrinter implements Printer {
+    private static int callCount;
+
     public static class Message {
         private String text;
         private String sender;
@@ -42,9 +44,14 @@ public class ConsolePrinter implements Printer {
         } else {
             System.out.println(message.sender + " sent a message: " + message.text);
         }
+        callCount++;
     }
 
     private boolean isEmpty(String text) {
         return text == null || text.isEmpty();
+    }
+
+    public static void executeStatistics() {
+        System.out.println("Execute statistics: " + callCount);
     }
 }
