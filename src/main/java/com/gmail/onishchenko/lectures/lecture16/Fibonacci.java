@@ -13,22 +13,12 @@ public class Fibonacci {
      * #f(n) = f(n-1) + f(n-2)
      * */
     public static int fibonacci(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("Wrong n value: " + n);
+        if(n <= 0) {
+            throw new IllegalArgumentException();
         } else if (n == 1 || n == 2) {
             return 1;
         }
-        int previous = 1;
-        int step = 3;
-        int current = 2;
-        while (step < n) {
-            int tmp = current;
-            current = current + previous;
-            previous = tmp;
-            step++;
-        }
-
-        return current;
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
     public static void main(String[] args) {
